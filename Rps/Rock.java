@@ -32,9 +32,13 @@ public class Rock{
             won = p1c;
             return "Player 1";
         }
-        else{
+        else if(p2.equals("1") && p1.equals("3") || p2.equals("2") && p1.equals("1") || p2.equals("3") && p1.equals("2")){
             won = p2c;
             return "Player 2";
+        }
+        else{
+            won = "Nothin\'";
+            return "Ya'll drawed";
         }
 
     }
