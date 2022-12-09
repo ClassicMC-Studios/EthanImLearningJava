@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cjsV3</title>
 </head>
 <body>
     <canvas id="myCanvas"></canvas>
     <script src="./cjs3.js"></script>
     <script>
         let x = 0; let y = 0
-        createCanvas(19,20,30,30);
+        createOriginalCanvas();
         function redraw(){
-            clear();
+            clearOriginalCanvas();
             setDot(x,y)
         }redraw(); 
+
         document.addEventListener('keydown',function (evt){
         if(event.keyCode == 39){
             x++;

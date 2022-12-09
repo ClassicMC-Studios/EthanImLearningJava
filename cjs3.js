@@ -14,25 +14,66 @@ function createCanvas(w,h,bw,bh){
     let tx = 10; let ty = 10;
     for(let y = 0; y < h; y++){
         for(let i = 0; i <w; i++){
+           if(tx < 700){
             c.fillStyle = "lightgray";
             c.fillRect(tx,ty,bw,bh);
             tx += standardWidth+5;
             eachPos.push({x:tx,y:ty,xx:i,yy:y})
+           }
         }
         tx = 10;
-        ty +=standardHeight+5;
+        if(ty < 460){
+            ty +=standardHeight+5;
+        }
+    }
+}
+function createOriginalCanvas(){
+    c.fillStyle = "white";
+    c.fillRect(0,0,720,480);
+    c.fillStyle = "lightgray";
+    standardHeight =50; standardWidth = 50;
+    let tx = 90; let ty = 100;
+    for(let y = 0; y < 6; y++){
+        for(let i = 0; i <8; i++){
+            c.fillStyle = "lightgray";
+            c.fillRect(tx+15,ty,standardWidth,standardHeight);
+            tx += 70;
+            eachPos.push({x:tx,y:ty,xx:i,yy:y})
+        }
+        tx = 90;
+        ty +=70;
+    }
+}
+function clearOriginalCanvas(){
+    c.fillStyle = "white";
+    c.fillRect(0,0,720,480);
+    c.fillStyle = "lightgray";
+    standardHeight =50; standardWidth = 50;
+    let tx = 90; let ty = 100;
+    for(let y = 0; y < 6; y++){
+        for(let i = 0; i <8; i++){
+            c.fillStyle = "lightgray";
+            c.fillRect(tx+15,ty,standardWidth,standardHeight);
+            tx += 70;
+        }
+        tx = 90;
+        ty +=70;
     }
 }
 function clear(){
     let tx = 10; let ty = 10;
     for(let y = 0; y < hh; y++){
         for(let i = 0; i <ww; i++){
-            c.fillStyle = "lightgray";
-            c.fillRect(tx,ty,standardWidth,standardHeight);
-            tx += standardWidth+5;
+            if(tx < 700){
+                c.fillStyle = "lightgray";
+                c.fillRect(tx,ty,standardWidth,standardHeight);
+                tx += standardWidth+5;
+            }
         }
         tx = 10;
-        ty +=standardHeight+5;
+        if(ty < 460){
+            ty +=standardHeight+5;
+        }
     }
 }
 function setDot(x,y){
