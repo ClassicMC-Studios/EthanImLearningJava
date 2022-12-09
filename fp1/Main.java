@@ -10,8 +10,11 @@ public class Main {
         Enemy enm = new Enemy();
         MakeAtack ma = new MakeAtack();
         ply.init();enm.init();
-        if(ma.playerAttack() == 'a'){
+        ma.playerAttack();
+        if(ma.atk == "a"){
             System.out.println("Attack");
+        }else{
+            enm.debug("Fail or Defend");
         }
     }
 }

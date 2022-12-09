@@ -10,7 +10,7 @@ public class Player {
     public void init(){
         debug("What is your name?");
         Scanner getName = new Scanner(System.in);
-        name = getName.nextLine();
+        name = getName.next();
         getName.close();
     }
 }
