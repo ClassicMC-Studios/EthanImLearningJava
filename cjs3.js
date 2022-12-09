@@ -76,10 +76,10 @@ function clear(){
         }
     }
 }
-function setDot(x,y){
+function setDot(x,y,color){
+    c.fillStyle = color;
     for(let z = 0; z < eachPos.length; z++){
         if(x == eachPos[z].xx && y == eachPos[z].yy){
-            c.fillStyle = "orange";
             c.fillRect(eachPos[z].x-(standardWidth+5),eachPos[z].y,standardWidth,standardHeight);
         }
     }
