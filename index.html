@@ -43,14 +43,14 @@
         createCanvas(30,6,20,20);
         class Dot{
             constructor(x,y,color){
-                setDot(x,y,color);
-                setDot(x-1,y,color);
-                setDot(x-2,y,color);
+                for(let i = 0; i <4; i++){
+                    setDot(x-i,y,color);
+                }
             }
         }
         function redraw(){
             for(let i = 0; i < dots.length;i++){
-                if(offset <= -30){
+                if(offset <= -90){
                     offset = 7;
                 }
                 new Dot(dots[i].x-offset,dots[i].y,dots[i].color);
