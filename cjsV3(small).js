@@ -1,7 +1,7 @@
 const canvas = document.getElementById("myCanvas");
 const c = canvas.getContext("2d");
 canvas.width = 720;
-canvas.height = 500;
+canvas.height = 200;
 let eachPos = []
 let standardWidth = 20;
 let standardHeight = 20;
